@@ -15,14 +15,15 @@ datasource db {
 }
 
 model User {
-  id        String    @id @default(uuid())
-  name      String
-  email     String    @unique
-  password  String
-  role      Role
-  animals   Animal[]  @relation("UserAnimals")
-  products  Product[]
-  createdAt DateTime  @default(now())
+  id             String    @id @default(uuid())
+  name           String
+  email          String    @unique
+  password       String
+  role           Role
+  profilImageUrl String
+  animals        Animal[]  @relation("UserAnimals")
+  products       Product[]
+  createdAt      DateTime  @default(now())
 }
 
 enum Role {
@@ -31,18 +32,19 @@ enum Role {
 }
 
 model Animal {
-  id          String         @id @default(uuid())
-  name        String
-  description String
-  category    AnimalCategory
-  gender      Gender
-  color       String
-  size        String
-  price       Float
-  forAdoption Boolean        @default(false)
-  owner       User           @relation("UserAnimals", fields: [ownerId], references: [id])
-  ownerId     String
-  createdAt   DateTime       @default(now())
+  id              String         @id @default(uuid())
+  name            String
+  description     String
+  category        AnimalCategory
+  gender          Gender
+  color           String
+  size            String
+  price           Float
+  animalImagesUrl String
+  forAdoption     Boolean        @default(false)
+  owner           User           @relation("UserAnimals", fields: [ownerId], references: [id])
+  ownerId         String
+  createdAt       DateTime       @default(now())
 }
 
 enum Gender {
@@ -64,11 +66,12 @@ enum AnimalCategory {
 }
 
 model Product {
-  id          String   @id @default(uuid())
-  name        String
-  description String
-  price       Float
-  seller      User     @relation(fields: [sellerId], references: [id])
-  sellerId    String
-  createdAt   DateTime @default(now())
+  id               String   @id @default(uuid())
+  name             String
+  description      String
+  price            Float
+  productImagesUrl String
+  seller           User     @relation(fields: [sellerId], references: [id])
+  sellerId         String
+  createdAt        DateTime @default(now())
 }

@@ -1155,6 +1155,7 @@ export namespace Prisma {
     email: string | null
     password: string | null
     role: $Enums.Role | null
+    profilImageUrl: string | null
     createdAt: Date | null
   }
 
@@ -1164,6 +1165,7 @@ export namespace Prisma {
     email: string | null
     password: string | null
     role: $Enums.Role | null
+    profilImageUrl: string | null
     createdAt: Date | null
   }
 
@@ -1173,6 +1175,7 @@ export namespace Prisma {
     email: number
     password: number
     role: number
+    profilImageUrl: number
     createdAt: number
     _all: number
   }
@@ -1184,6 +1187,7 @@ export namespace Prisma {
     email?: true
     password?: true
     role?: true
+    profilImageUrl?: true
     createdAt?: true
   }
 
@@ -1193,6 +1197,7 @@ export namespace Prisma {
     email?: true
     password?: true
     role?: true
+    profilImageUrl?: true
     createdAt?: true
   }
 
@@ -1202,6 +1207,7 @@ export namespace Prisma {
     email?: true
     password?: true
     role?: true
+    profilImageUrl?: true
     createdAt?: true
     _all?: true
   }
@@ -1284,6 +1290,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt: Date
     _count: UserCountAggregateOutputType | null
     _min: UserMinAggregateOutputType | null
@@ -1310,6 +1317,7 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
+    profilImageUrl?: boolean
     createdAt?: boolean
     animals?: boolean | User$animalsArgs<ExtArgs>
     products?: boolean | User$productsArgs<ExtArgs>
@@ -1322,6 +1330,7 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
+    profilImageUrl?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -1331,6 +1340,7 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
+    profilImageUrl?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["user"]>
 
@@ -1340,10 +1350,11 @@ export namespace Prisma {
     email?: boolean
     password?: boolean
     role?: boolean
+    profilImageUrl?: boolean
     createdAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "role" | "createdAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password" | "role" | "profilImageUrl" | "createdAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     animals?: boolean | User$animalsArgs<ExtArgs>
     products?: boolean | User$productsArgs<ExtArgs>
@@ -1364,6 +1375,7 @@ export namespace Prisma {
       email: string
       password: string
       role: $Enums.Role
+      profilImageUrl: string
       createdAt: Date
     }, ExtArgs["result"]["user"]>
     composites: {}
@@ -1795,6 +1807,7 @@ export namespace Prisma {
     readonly email: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
     readonly role: FieldRef<"User", 'Role'>
+    readonly profilImageUrl: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
   }
     
@@ -2279,6 +2292,7 @@ export namespace Prisma {
     color: string | null
     size: string | null
     price: number | null
+    animalImagesUrl: string | null
     forAdoption: boolean | null
     ownerId: string | null
     createdAt: Date | null
@@ -2293,6 +2307,7 @@ export namespace Prisma {
     color: string | null
     size: string | null
     price: number | null
+    animalImagesUrl: string | null
     forAdoption: boolean | null
     ownerId: string | null
     createdAt: Date | null
@@ -2307,6 +2322,7 @@ export namespace Prisma {
     color: number
     size: number
     price: number
+    animalImagesUrl: number
     forAdoption: number
     ownerId: number
     createdAt: number
@@ -2331,6 +2347,7 @@ export namespace Prisma {
     color?: true
     size?: true
     price?: true
+    animalImagesUrl?: true
     forAdoption?: true
     ownerId?: true
     createdAt?: true
@@ -2345,6 +2362,7 @@ export namespace Prisma {
     color?: true
     size?: true
     price?: true
+    animalImagesUrl?: true
     forAdoption?: true
     ownerId?: true
     createdAt?: true
@@ -2359,6 +2377,7 @@ export namespace Prisma {
     color?: true
     size?: true
     price?: true
+    animalImagesUrl?: true
     forAdoption?: true
     ownerId?: true
     createdAt?: true
@@ -2460,6 +2479,7 @@ export namespace Prisma {
     color: string
     size: string
     price: number
+    animalImagesUrl: string
     forAdoption: boolean
     ownerId: string
     createdAt: Date
@@ -2493,6 +2513,7 @@ export namespace Prisma {
     color?: boolean
     size?: boolean
     price?: boolean
+    animalImagesUrl?: boolean
     forAdoption?: boolean
     ownerId?: boolean
     createdAt?: boolean
@@ -2508,6 +2529,7 @@ export namespace Prisma {
     color?: boolean
     size?: boolean
     price?: boolean
+    animalImagesUrl?: boolean
     forAdoption?: boolean
     ownerId?: boolean
     createdAt?: boolean
@@ -2523,6 +2545,7 @@ export namespace Prisma {
     color?: boolean
     size?: boolean
     price?: boolean
+    animalImagesUrl?: boolean
     forAdoption?: boolean
     ownerId?: boolean
     createdAt?: boolean
@@ -2538,12 +2561,13 @@ export namespace Prisma {
     color?: boolean
     size?: boolean
     price?: boolean
+    animalImagesUrl?: boolean
     forAdoption?: boolean
     ownerId?: boolean
     createdAt?: boolean
   }
 
-  export type AnimalOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "category" | "gender" | "color" | "size" | "price" | "forAdoption" | "ownerId" | "createdAt", ExtArgs["result"]["animal"]>
+  export type AnimalOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "category" | "gender" | "color" | "size" | "price" | "animalImagesUrl" | "forAdoption" | "ownerId" | "createdAt", ExtArgs["result"]["animal"]>
   export type AnimalInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     owner?: boolean | UserDefaultArgs<ExtArgs>
   }
@@ -2568,6 +2592,7 @@ export namespace Prisma {
       color: string
       size: string
       price: number
+      animalImagesUrl: string
       forAdoption: boolean
       ownerId: string
       createdAt: Date
@@ -3003,6 +3028,7 @@ export namespace Prisma {
     readonly color: FieldRef<"Animal", 'String'>
     readonly size: FieldRef<"Animal", 'String'>
     readonly price: FieldRef<"Animal", 'Float'>
+    readonly animalImagesUrl: FieldRef<"Animal", 'String'>
     readonly forAdoption: FieldRef<"Animal", 'Boolean'>
     readonly ownerId: FieldRef<"Animal", 'String'>
     readonly createdAt: FieldRef<"Animal", 'DateTime'>
@@ -3445,6 +3471,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     price: number | null
+    productImagesUrl: string | null
     sellerId: string | null
     createdAt: Date | null
   }
@@ -3454,6 +3481,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     price: number | null
+    productImagesUrl: string | null
     sellerId: string | null
     createdAt: Date | null
   }
@@ -3463,6 +3491,7 @@ export namespace Prisma {
     name: number
     description: number
     price: number
+    productImagesUrl: number
     sellerId: number
     createdAt: number
     _all: number
@@ -3482,6 +3511,7 @@ export namespace Prisma {
     name?: true
     description?: true
     price?: true
+    productImagesUrl?: true
     sellerId?: true
     createdAt?: true
   }
@@ -3491,6 +3521,7 @@ export namespace Prisma {
     name?: true
     description?: true
     price?: true
+    productImagesUrl?: true
     sellerId?: true
     createdAt?: true
   }
@@ -3500,6 +3531,7 @@ export namespace Prisma {
     name?: true
     description?: true
     price?: true
+    productImagesUrl?: true
     sellerId?: true
     createdAt?: true
     _all?: true
@@ -3596,6 +3628,7 @@ export namespace Prisma {
     name: string
     description: string
     price: number
+    productImagesUrl: string
     sellerId: string
     createdAt: Date
     _count: ProductCountAggregateOutputType | null
@@ -3624,6 +3657,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     price?: boolean
+    productImagesUrl?: boolean
     sellerId?: boolean
     createdAt?: boolean
     seller?: boolean | UserDefaultArgs<ExtArgs>
@@ -3634,6 +3668,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     price?: boolean
+    productImagesUrl?: boolean
     sellerId?: boolean
     createdAt?: boolean
     seller?: boolean | UserDefaultArgs<ExtArgs>
@@ -3644,6 +3679,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     price?: boolean
+    productImagesUrl?: boolean
     sellerId?: boolean
     createdAt?: boolean
     seller?: boolean | UserDefaultArgs<ExtArgs>
@@ -3654,11 +3690,12 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     price?: boolean
+    productImagesUrl?: boolean
     sellerId?: boolean
     createdAt?: boolean
   }
 
-  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "price" | "sellerId" | "createdAt", ExtArgs["result"]["product"]>
+  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "price" | "productImagesUrl" | "sellerId" | "createdAt", ExtArgs["result"]["product"]>
   export type ProductInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     seller?: boolean | UserDefaultArgs<ExtArgs>
   }
@@ -3679,6 +3716,7 @@ export namespace Prisma {
       name: string
       description: string
       price: number
+      productImagesUrl: string
       sellerId: string
       createdAt: Date
     }, ExtArgs["result"]["product"]>
@@ -4109,6 +4147,7 @@ export namespace Prisma {
     readonly name: FieldRef<"Product", 'String'>
     readonly description: FieldRef<"Product", 'String'>
     readonly price: FieldRef<"Product", 'Float'>
+    readonly productImagesUrl: FieldRef<"Product", 'String'>
     readonly sellerId: FieldRef<"Product", 'String'>
     readonly createdAt: FieldRef<"Product", 'DateTime'>
   }
@@ -4545,6 +4584,7 @@ export namespace Prisma {
     email: 'email',
     password: 'password',
     role: 'role',
+    profilImageUrl: 'profilImageUrl',
     createdAt: 'createdAt'
   };
 
@@ -4560,6 +4600,7 @@ export namespace Prisma {
     color: 'color',
     size: 'size',
     price: 'price',
+    animalImagesUrl: 'animalImagesUrl',
     forAdoption: 'forAdoption',
     ownerId: 'ownerId',
     createdAt: 'createdAt'
@@ -4573,6 +4614,7 @@ export namespace Prisma {
     name: 'name',
     description: 'description',
     price: 'price',
+    productImagesUrl: 'productImagesUrl',
     sellerId: 'sellerId',
     createdAt: 'createdAt'
   };
@@ -4718,6 +4760,7 @@ export namespace Prisma {
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
+    profilImageUrl?: StringFilter<"User"> | string
     createdAt?: DateTimeFilter<"User"> | Date | string
     animals?: AnimalListRelationFilter
     products?: ProductListRelationFilter
@@ -4729,6 +4772,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
+    profilImageUrl?: SortOrder
     createdAt?: SortOrder
     animals?: AnimalOrderByRelationAggregateInput
     products?: ProductOrderByRelationAggregateInput
@@ -4743,6 +4787,7 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     role?: EnumRoleFilter<"User"> | $Enums.Role
+    profilImageUrl?: StringFilter<"User"> | string
     createdAt?: DateTimeFilter<"User"> | Date | string
     animals?: AnimalListRelationFilter
     products?: ProductListRelationFilter
@@ -4754,6 +4799,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
+    profilImageUrl?: SortOrder
     createdAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
@@ -4769,6 +4815,7 @@ export namespace Prisma {
     email?: StringWithAggregatesFilter<"User"> | string
     password?: StringWithAggregatesFilter<"User"> | string
     role?: EnumRoleWithAggregatesFilter<"User"> | $Enums.Role
+    profilImageUrl?: StringWithAggregatesFilter<"User"> | string
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
@@ -4784,6 +4831,7 @@ export namespace Prisma {
     color?: StringFilter<"Animal"> | string
     size?: StringFilter<"Animal"> | string
     price?: FloatFilter<"Animal"> | number
+    animalImagesUrl?: StringFilter<"Animal"> | string
     forAdoption?: BoolFilter<"Animal"> | boolean
     ownerId?: StringFilter<"Animal"> | string
     createdAt?: DateTimeFilter<"Animal"> | Date | string
@@ -4799,6 +4847,7 @@ export namespace Prisma {
     color?: SortOrder
     size?: SortOrder
     price?: SortOrder
+    animalImagesUrl?: SortOrder
     forAdoption?: SortOrder
     ownerId?: SortOrder
     createdAt?: SortOrder
@@ -4817,6 +4866,7 @@ export namespace Prisma {
     color?: StringFilter<"Animal"> | string
     size?: StringFilter<"Animal"> | string
     price?: FloatFilter<"Animal"> | number
+    animalImagesUrl?: StringFilter<"Animal"> | string
     forAdoption?: BoolFilter<"Animal"> | boolean
     ownerId?: StringFilter<"Animal"> | string
     createdAt?: DateTimeFilter<"Animal"> | Date | string
@@ -4832,6 +4882,7 @@ export namespace Prisma {
     color?: SortOrder
     size?: SortOrder
     price?: SortOrder
+    animalImagesUrl?: SortOrder
     forAdoption?: SortOrder
     ownerId?: SortOrder
     createdAt?: SortOrder
@@ -4854,6 +4905,7 @@ export namespace Prisma {
     color?: StringWithAggregatesFilter<"Animal"> | string
     size?: StringWithAggregatesFilter<"Animal"> | string
     price?: FloatWithAggregatesFilter<"Animal"> | number
+    animalImagesUrl?: StringWithAggregatesFilter<"Animal"> | string
     forAdoption?: BoolWithAggregatesFilter<"Animal"> | boolean
     ownerId?: StringWithAggregatesFilter<"Animal"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Animal"> | Date | string
@@ -4867,6 +4919,7 @@ export namespace Prisma {
     name?: StringFilter<"Product"> | string
     description?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
+    productImagesUrl?: StringFilter<"Product"> | string
     sellerId?: StringFilter<"Product"> | string
     createdAt?: DateTimeFilter<"Product"> | Date | string
     seller?: XOR<UserScalarRelationFilter, UserWhereInput>
@@ -4877,6 +4930,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
+    productImagesUrl?: SortOrder
     sellerId?: SortOrder
     createdAt?: SortOrder
     seller?: UserOrderByWithRelationInput
@@ -4890,6 +4944,7 @@ export namespace Prisma {
     name?: StringFilter<"Product"> | string
     description?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
+    productImagesUrl?: StringFilter<"Product"> | string
     sellerId?: StringFilter<"Product"> | string
     createdAt?: DateTimeFilter<"Product"> | Date | string
     seller?: XOR<UserScalarRelationFilter, UserWhereInput>
@@ -4900,6 +4955,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
+    productImagesUrl?: SortOrder
     sellerId?: SortOrder
     createdAt?: SortOrder
     _count?: ProductCountOrderByAggregateInput
@@ -4917,6 +4973,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Product"> | string
     description?: StringWithAggregatesFilter<"Product"> | string
     price?: FloatWithAggregatesFilter<"Product"> | number
+    productImagesUrl?: StringWithAggregatesFilter<"Product"> | string
     sellerId?: StringWithAggregatesFilter<"Product"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
   }
@@ -4927,6 +4984,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt?: Date | string
     animals?: AnimalCreateNestedManyWithoutOwnerInput
     products?: ProductCreateNestedManyWithoutSellerInput
@@ -4938,6 +4996,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt?: Date | string
     animals?: AnimalUncheckedCreateNestedManyWithoutOwnerInput
     products?: ProductUncheckedCreateNestedManyWithoutSellerInput
@@ -4949,6 +5008,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     animals?: AnimalUpdateManyWithoutOwnerNestedInput
     products?: ProductUpdateManyWithoutSellerNestedInput
@@ -4960,6 +5020,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     animals?: AnimalUncheckedUpdateManyWithoutOwnerNestedInput
     products?: ProductUncheckedUpdateManyWithoutSellerNestedInput
@@ -4971,6 +5032,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt?: Date | string
   }
 
@@ -4980,6 +5042,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -4989,6 +5052,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -5001,6 +5065,7 @@ export namespace Prisma {
     color: string
     size: string
     price: number
+    animalImagesUrl: string
     forAdoption?: boolean
     createdAt?: Date | string
     owner: UserCreateNestedOneWithoutAnimalsInput
@@ -5015,6 +5080,7 @@ export namespace Prisma {
     color: string
     size: string
     price: number
+    animalImagesUrl: string
     forAdoption?: boolean
     ownerId: string
     createdAt?: Date | string
@@ -5029,6 +5095,7 @@ export namespace Prisma {
     color?: StringFieldUpdateOperationsInput | string
     size?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    animalImagesUrl?: StringFieldUpdateOperationsInput | string
     forAdoption?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     owner?: UserUpdateOneRequiredWithoutAnimalsNestedInput
@@ -5043,6 +5110,7 @@ export namespace Prisma {
     color?: StringFieldUpdateOperationsInput | string
     size?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    animalImagesUrl?: StringFieldUpdateOperationsInput | string
     forAdoption?: BoolFieldUpdateOperationsInput | boolean
     ownerId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -5057,6 +5125,7 @@ export namespace Prisma {
     color: string
     size: string
     price: number
+    animalImagesUrl: string
     forAdoption?: boolean
     ownerId: string
     createdAt?: Date | string
@@ -5071,6 +5140,7 @@ export namespace Prisma {
     color?: StringFieldUpdateOperationsInput | string
     size?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    animalImagesUrl?: StringFieldUpdateOperationsInput | string
     forAdoption?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -5084,6 +5154,7 @@ export namespace Prisma {
     color?: StringFieldUpdateOperationsInput | string
     size?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    animalImagesUrl?: StringFieldUpdateOperationsInput | string
     forAdoption?: BoolFieldUpdateOperationsInput | boolean
     ownerId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -5094,6 +5165,7 @@ export namespace Prisma {
     name: string
     description: string
     price: number
+    productImagesUrl: string
     createdAt?: Date | string
     seller: UserCreateNestedOneWithoutProductsInput
   }
@@ -5103,6 +5175,7 @@ export namespace Prisma {
     name: string
     description: string
     price: number
+    productImagesUrl: string
     sellerId: string
     createdAt?: Date | string
   }
@@ -5112,6 +5185,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    productImagesUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     seller?: UserUpdateOneRequiredWithoutProductsNestedInput
   }
@@ -5121,6 +5195,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    productImagesUrl?: StringFieldUpdateOperationsInput | string
     sellerId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -5130,6 +5205,7 @@ export namespace Prisma {
     name: string
     description: string
     price: number
+    productImagesUrl: string
     sellerId: string
     createdAt?: Date | string
   }
@@ -5139,6 +5215,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    productImagesUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -5147,6 +5224,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    productImagesUrl?: StringFieldUpdateOperationsInput | string
     sellerId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -5210,6 +5288,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
+    profilImageUrl?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -5219,6 +5298,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
+    profilImageUrl?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -5228,6 +5308,7 @@ export namespace Prisma {
     email?: SortOrder
     password?: SortOrder
     role?: SortOrder
+    profilImageUrl?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -5317,6 +5398,7 @@ export namespace Prisma {
     color?: SortOrder
     size?: SortOrder
     price?: SortOrder
+    animalImagesUrl?: SortOrder
     forAdoption?: SortOrder
     ownerId?: SortOrder
     createdAt?: SortOrder
@@ -5335,6 +5417,7 @@ export namespace Prisma {
     color?: SortOrder
     size?: SortOrder
     price?: SortOrder
+    animalImagesUrl?: SortOrder
     forAdoption?: SortOrder
     ownerId?: SortOrder
     createdAt?: SortOrder
@@ -5349,6 +5432,7 @@ export namespace Prisma {
     color?: SortOrder
     size?: SortOrder
     price?: SortOrder
+    animalImagesUrl?: SortOrder
     forAdoption?: SortOrder
     ownerId?: SortOrder
     createdAt?: SortOrder
@@ -5407,6 +5491,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
+    productImagesUrl?: SortOrder
     sellerId?: SortOrder
     createdAt?: SortOrder
   }
@@ -5420,6 +5505,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
+    productImagesUrl?: SortOrder
     sellerId?: SortOrder
     createdAt?: SortOrder
   }
@@ -5429,6 +5515,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
+    productImagesUrl?: SortOrder
     sellerId?: SortOrder
     createdAt?: SortOrder
   }
@@ -5748,6 +5835,7 @@ export namespace Prisma {
     color: string
     size: string
     price: number
+    animalImagesUrl: string
     forAdoption?: boolean
     createdAt?: Date | string
   }
@@ -5761,6 +5849,7 @@ export namespace Prisma {
     color: string
     size: string
     price: number
+    animalImagesUrl: string
     forAdoption?: boolean
     createdAt?: Date | string
   }
@@ -5780,6 +5869,7 @@ export namespace Prisma {
     name: string
     description: string
     price: number
+    productImagesUrl: string
     createdAt?: Date | string
   }
 
@@ -5788,6 +5878,7 @@ export namespace Prisma {
     name: string
     description: string
     price: number
+    productImagesUrl: string
     createdAt?: Date | string
   }
 
@@ -5829,6 +5920,7 @@ export namespace Prisma {
     color?: StringFilter<"Animal"> | string
     size?: StringFilter<"Animal"> | string
     price?: FloatFilter<"Animal"> | number
+    animalImagesUrl?: StringFilter<"Animal"> | string
     forAdoption?: BoolFilter<"Animal"> | boolean
     ownerId?: StringFilter<"Animal"> | string
     createdAt?: DateTimeFilter<"Animal"> | Date | string
@@ -5858,6 +5950,7 @@ export namespace Prisma {
     name?: StringFilter<"Product"> | string
     description?: StringFilter<"Product"> | string
     price?: FloatFilter<"Product"> | number
+    productImagesUrl?: StringFilter<"Product"> | string
     sellerId?: StringFilter<"Product"> | string
     createdAt?: DateTimeFilter<"Product"> | Date | string
   }
@@ -5868,6 +5961,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt?: Date | string
     products?: ProductCreateNestedManyWithoutSellerInput
   }
@@ -5878,6 +5972,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt?: Date | string
     products?: ProductUncheckedCreateNestedManyWithoutSellerInput
   }
@@ -5904,6 +5999,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     products?: ProductUpdateManyWithoutSellerNestedInput
   }
@@ -5914,6 +6010,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     products?: ProductUncheckedUpdateManyWithoutSellerNestedInput
   }
@@ -5924,6 +6021,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt?: Date | string
     animals?: AnimalCreateNestedManyWithoutOwnerInput
   }
@@ -5934,6 +6032,7 @@ export namespace Prisma {
     email: string
     password: string
     role: $Enums.Role
+    profilImageUrl: string
     createdAt?: Date | string
     animals?: AnimalUncheckedCreateNestedManyWithoutOwnerInput
   }
@@ -5960,6 +6059,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     animals?: AnimalUpdateManyWithoutOwnerNestedInput
   }
@@ -5970,6 +6070,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     role?: EnumRoleFieldUpdateOperationsInput | $Enums.Role
+    profilImageUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     animals?: AnimalUncheckedUpdateManyWithoutOwnerNestedInput
   }
@@ -5983,6 +6084,7 @@ export namespace Prisma {
     color: string
     size: string
     price: number
+    animalImagesUrl: string
     forAdoption?: boolean
     createdAt?: Date | string
   }
@@ -5992,6 +6094,7 @@ export namespace Prisma {
     name: string
     description: string
     price: number
+    productImagesUrl: string
     createdAt?: Date | string
   }
 
@@ -6004,6 +6107,7 @@ export namespace Prisma {
     color?: StringFieldUpdateOperationsInput | string
     size?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    animalImagesUrl?: StringFieldUpdateOperationsInput | string
     forAdoption?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6017,6 +6121,7 @@ export namespace Prisma {
     color?: StringFieldUpdateOperationsInput | string
     size?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    animalImagesUrl?: StringFieldUpdateOperationsInput | string
     forAdoption?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6030,6 +6135,7 @@ export namespace Prisma {
     color?: StringFieldUpdateOperationsInput | string
     size?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    animalImagesUrl?: StringFieldUpdateOperationsInput | string
     forAdoption?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -6039,6 +6145,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    productImagesUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -6047,6 +6154,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    productImagesUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -6055,6 +6163,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     price?: FloatFieldUpdateOperationsInput | number
+    productImagesUrl?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
