@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+body{
+    color: #242B33;
+}
+
 @theme {
     --color-main: #003459;
     --color-main-min: rgb(0 52 89 / 40%);
