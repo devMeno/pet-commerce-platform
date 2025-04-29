@@ -35,7 +35,7 @@ export function ResgisterForm({
                 </p>
             </div>
             <div className="grid gap-6">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className={'flex flex-col gap-2'}>
                     <div className="grid gap-2">
                         <Label htmlFor="name">Nom</Label>
                         <Input id="name" name={'name'} type="text" placeholder="Votre nom" required />

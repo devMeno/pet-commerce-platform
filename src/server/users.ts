@@ -1,4 +1,4 @@
-import prisma from "@/lib/prisma";
+import {prisma} from "@/lib/prisma";
 import {userValidation} from "@/lib/validations";
 
 export async function addUser(formdata: FormData): Promise<> {
