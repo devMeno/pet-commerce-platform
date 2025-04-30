@@ -1,13 +1,11 @@
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-
+import Navbar from "@/components/custom/navbar";
+import Footer from "@/components/custom/footer";
 
 export default function Home() {
     return (
         <>
-            <form action="">
-
-            </form>
+            <Navbar/>
+            <Footer/>
         </>
     );
 }

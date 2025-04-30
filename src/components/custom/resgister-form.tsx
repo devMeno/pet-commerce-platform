@@ -13,13 +13,14 @@ export function ResgisterForm({
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget)
-        console.log(formData)
-        if (!formData.get('password') === formData.get('confirmpassword')) {
-            console.log('Les mots de passe doivent être identiques!')
+        const password = formData.get('password')
+        const confPassword = formData.get('confirmPassword')
+        if (password !== confPassword) {
+            console.log('Mots de passe incorrects !')
         }
 
         const res  = await addUser(formData)
-        if (res.status === 200) {
+        if (res.success === true) {
             console.log('Compte créé')
         }else {
             console.log(res.error)
@@ -52,9 +53,9 @@ export function ResgisterForm({
                     </div>
                     <div className="grid gap-2">
                         <div className="flex items-center">
-                            <Label htmlFor="confirmpassword">Confirmer votre mot de passe</Label>
+                            <Label htmlFor="confirmPassword">Confirmer votre mot de passe</Label>
                         </div>
-                        <Input id="confirmpassword" name={'confirmpassword'} type="password" required />
+                        <Input id="confirmPassword" name={'confirmPassword'} type="password" required />
                     </div>
                     <Button type="submit" className="w-full">
                         Créer mon compte

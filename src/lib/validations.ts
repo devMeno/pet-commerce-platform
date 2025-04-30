@@ -21,7 +21,6 @@ export const userValidation = z.object({
             "Une majuscule, une minuscule, un chiffre et un caractère spécial sont requis"
         ),
     role: z.enum(["BUYER","SELLER"]),
-    profilImageUrl: imageSchema.optional()
 })
 
 export const animalValidationSchema = z.object({

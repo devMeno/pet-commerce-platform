@@ -1,32 +1,46 @@
+'use server'
 import {prisma} from "@/lib/prisma";
 import {userValidation} from "@/lib/validations";
+import bcrypt from 'bcryptjs';
 
-export async function addUser(formdata: FormData): Promise<> {
-    const verifiedData = userValidation.safeParse({
-        name: formdata.get("name"),
-        email: formdata.get("email"),
-        password: formdata.get("password"),
-        role: formdata.get("role"),
-        profilImageUrl: formdata.get("profilImageUrl"),
-    })
+export async function addUser(formdata: FormData): Promise<{ success?: boolean; error?: boolean; message?: any }> {
+    try {
+        console.log(formdata);
 
-    if (!verifiedData.success) {
-        console.log('Invalid user data');
-        return {error: true, message: verifiedData.error.flatten().fieldErrors};
-    }
-    console.log(verifiedData);
+        const verifiedData = userValidation.safeParse({
+            name: formdata.get("name"),
+            email: formdata.get("email"),
+            password: formdata.get("password"),
+            role: 'BUYER',
+        })
+        console.log(verifiedData);
 
-    const {name, email, password, role, profilImageUrl} = verifiedData.data;
-
-    await prisma.User.create({
-        data: {
-            name: name,
-            email: email,
-            password: password,
-            role: role,
-            profilImageUrl: profilImageUrl,
+        if (!verifiedData.success) {
+            console.log('Invalid user data');
+            return {error: true, message: verifiedData.error.flatten().fieldErrors};
         }
-    })
+        console.log(verifiedData);
 
-    return {succes: true}
+        const {name, email, password, role} = verifiedData.data;
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        await prisma.user.create({
+            data: {
+                name,
+                email,
+                password: hashedPassword,
+                role,
+                profilImageUrl: ''
+            }
+        })
+
+        return {success: true}
+    }catch (error) {
+        console.error('Erreur lors de la création de l’utilisateur :', error)
+        return {
+            error: true,
+            message: 'Erreur serveur',
+        }
+    }
 }
