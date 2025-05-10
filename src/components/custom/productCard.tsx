@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductCard = () => {
     return (
-        <div className={'w-[280px] p-[8px] flex flex-col gap-[8px] rounded-[12px] bg-white'}>
+        <div className={'w-[280px] p-[8px] flex flex-col gap-[8px] rounded-[12px] bg-white drop-shadow-md'}>
             <img src="/pictures/imageProduct.svg" alt="" className={'size-[264px] mx-auto object-cover rounded-[12px]'} />
             <span className={'font-bold text-[16px]'}>MO231 - Pomeranian White</span>
             <div className={'flex gap-2'}>
