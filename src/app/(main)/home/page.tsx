@@ -10,8 +10,15 @@ import {InfiniteSlider} from "@/components/ui/infinite-slider";
 const Page = () => {
     return (
         <UserLayout>
+            <div className={'relative w-full h-[695px] rounded-b-[15px] lg:rounded-b-[50px] bg-sec-min overflow-hidden'}>
+                <div className={'flex flex-row w-full'}>
+                    <div className={'absolute -top-[570px] -left-[200px] rotate-26 size-[635px] bg-sec rounded-[99px]'}></div>
+                    <div className={'absolute right-[150px] top-[350px] z-20 rotate-15 size-[635px] bg-main rounded-[99px]'}></div>
+                    <div className={'absolute right-[85px] top-[320px] z-20 rotate-35 size-[635px] bg-sec rounded-[99px]'}></div>
+                </div>
+            </div>
             <div className={'relative pt-[100px] pb-[40px]'}>
-                <div className={'max-w-[1180px] w-[94%] lg:w-[80%] flex flex-col gap-[20px] mx-auto'}>
+                <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col gap-[20px] mx-auto'}>
                     <div className={'flex flex-col gap-[60px]'}>
                         <section className={'flex flex-col gap-4'}>
                             <div className={'flex flex-row items-center justify-between'}>

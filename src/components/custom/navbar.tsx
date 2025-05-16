@@ -12,7 +12,7 @@ import {
 
 const Navbar = () => {
     return (
-        <div className={'absolute top-0 left-0 w-full'}>
+        <div className={'absolute top-0 left-0 w-full z-40'}>
             <div className={'hidden md:block'}>
                 <div className={'max-w-[1180px] w-[94%] lg:w-[80%] flex flex-row mx-auto items-center justify-between py-[28px]'}>
                     <button>
