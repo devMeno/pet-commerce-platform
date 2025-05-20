@@ -10,7 +10,7 @@ body{
 
 @theme {
     --color-main: #003459;
-    --color-main-min: rgb(0 52 89 / 40%);
+    --color-main-min: #002A48;
     --color-main-moy: rgb(0 52 89 / 60%);
     --color-main-max: rgb(0 52 89 / 80%);
     --color-dos: rgb(52 89 1 / 100%);
