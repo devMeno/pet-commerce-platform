@@ -66,28 +66,62 @@ const Page = () => {
                         </section>
 
                         <section>
-                            <div className={'relative w-full h-[378px] flex flex-row bg-main rounded-[20px] overflow-hidden'}>
-                                <div className={'absolute top-[200px] -left-[150px] rotate-26 size-[787px] bg-main-min rounded-[99px]'}></div>
-                                <div className={'absolute -top-[420px] -right-[200px] rotate-26 size-[787px] bg-sec rounded-[99px]'}></div>
-                                <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col md:flex-row mx-auto z-40'}>
-                                    <div className={''}>
-                                        <img src="/pictures/pet_banner_pic.svg" alt="" className={'h-[600px] bottom-0'}/>
-                                    </div>
-                                    <div className={'w-full h-full md:w-2/3 flex flex-col gap-4'}>
-                                        <span className={'font-bold text-[60px]/[68px]'}>One more friend</span>
-                                        <span className={'font-bold text-[38px] md:text-[46px]/[60px]'}>Thousands more fun!</span>
-                                        <span className={'font-medium text-[16px] my-[10px] max-w-[480px]'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
-                                        <div className={'flex flex-row gap-4'}>
-                                            <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                View more
-                                            </Button>
-                                            <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                View more
-                                            </Button>
+                            <div className={'hidden md:block'}>
+                                <div className={'relative w-full h-[378px] flex flex-row bg-main rounded-[20px] overflow-hidden'}>
+                                    <div className={'absolute top-[200px] -left-[150px] rotate-26 size-[787px] bg-main-min rounded-[99px]'}></div>
+                                    <div className={'absolute -top-[420px] -right-[200px] rotate-26 size-[787px] bg-sec rounded-[99px]'}></div>
+                                    <div className={'flex flex-row px-[30px] lg:px-[75px] z-40'}>
+                                        <div className={'flex items-end'}>
+                                            <img src="/pictures/kisse.png" alt="" className={'bottom-0'}/>
+                                        </div>
+                                        <div className={'h-full lg:w-2/3 flex items-center'}>
+                                            <div className={'flex flex-col text-right h-fit'}>
+                                                <span className={'font-bold text-[52px]/[68px]'}>One more friend</span>
+                                                <span className={'font-bold text-[36px]/[60px]'}>Thousands more fun!</span>
+                                                <div className={'flex justify-end w-full'}>
+                                                    <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
+                                                </div>
+                                                <div className={'flex flex-row gap-4 justify-end'}>
+                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                                        View more
+                                                    </Button>
+                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                                        View more
+                                                    </Button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div className={'block md:hidden'}>
+                                <div className={'relative w-full h-[640px] flex flex-col bg-main rounded-[20px] overflow-hidden'}>
+                                    <div className={'absolute -top-[300px] -left-[130px]  -rotate-60 size-[610px] bg-sec rounded-[45px]'}></div>
+                                    <div className={'absolute -bottom-[450px] -left-[130px]  -rotate-60 size-[610px] bg-main-min rounded-[45px]'}></div>
+                                    <div className="flex flex-col z-40">
+                                        <div className={'text-center py-[36px] px-[20px]'}>
+                                            <span className={'font-bold text-[36px]/[54px]'}>One more friend</span><br/>
+                                            <span className={'font-bold text-[24px]/[36px]'}>Thousands more fun!</span><br/>
+                                            <div className={'flex justify-end w-full'}>
+                                                <span className={'font-medium text-[12px] my-[20px] w-full'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
+                                            </div>
+                                            <div className={'flex flex-row gap-4 justify-center'}>
+                                                <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                                    View more
+                                                </Button>
+                                                <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                                    View more
+                                                </Button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="/pictures/kisse.png" alt="" className={'h-[349px] w-[524px]'}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </section>
 
                         <section className={'flex flex-col gap-4'}>
@@ -163,6 +197,37 @@ const Page = () => {
                                     className="aspect-square w-[50px] md:w-[120px] rounded-[4px]"
                                 />
                             </InfiniteSlider>
+                        </section>
+
+                        <section>
+                            <div className={'hidden md:block'}>
+                                <div className={'relative w-full h-[378px] flex flex-row bg-main rounded-[20px] overflow-hidden'}>
+                                    <div className={'absolute top-[200px] -left-[150px] rotate-26 size-[787px] bg-main-min rounded-[99px]'}></div>
+                                    <div className={'absolute -top-[420px] -right-[200px] rotate-26 size-[787px] bg-sec rounded-[99px]'}></div>
+                                    <div className={'flex flex-row px-[30px] lg:px-[75px] z-40'}>
+                                        <div className={'flex items-end'}>
+                                            <img src="/pictures/kisse.png" alt="" className={'bottom-0'}/>
+                                        </div>
+                                        <div className={'h-full lg:w-2/3 flex items-center'}>
+                                            <div className={'flex flex-col text-right h-fit'}>
+                                                <span className={'font-bold text-[52px]/[68px]'}>One more friend</span>
+                                                <span className={'font-bold text-[36px]/[60px]'}>Thousands more fun!</span>
+                                                <div className={'flex justify-end w-full'}>
+                                                    <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
+                                                </div>
+                                                <div className={'flex flex-row gap-4 justify-end'}>
+                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                                        View more
+                                                    </Button>
+                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                                        View more
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
