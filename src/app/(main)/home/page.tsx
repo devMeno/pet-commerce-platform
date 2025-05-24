@@ -6,6 +6,7 @@ import ProductCard from "@/components/custom/productCard";
 import UserLayout from "@/components/custom/userLayout";
 import {Button} from "@/components/ui/button";
 import {InfiniteSlider} from "@/components/ui/infinite-slider";
+import BlogCard from "@/components/custom/blogCard";
 
 const Page = () => {
     return (
@@ -38,9 +39,9 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <div className={'relative pt-[100px] pb-[40px]'}>
+            <div className={'relative py-[80px]'}>
                 <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col gap-[20px] mx-auto'}>
-                    <div className={'flex flex-col gap-[60px]'}>
+                    <div className={'flex flex-col gap-[80px]'}>
                         <section className={'flex flex-col gap-4'}>
                             <div className={'flex flex-row items-center justify-between'}>
                                 <div className={'flex flex-col'}>
@@ -201,21 +202,21 @@ const Page = () => {
 
                         <section>
                             <div className={'hidden md:block'}>
-                                <div className={'relative w-full h-[378px] flex flex-row bg-main rounded-[20px] overflow-hidden'}>
-                                    <div className={'absolute top-[200px] -left-[150px] rotate-26 size-[787px] bg-main-min rounded-[99px]'}></div>
-                                    <div className={'absolute -top-[420px] -right-[200px] rotate-26 size-[787px] bg-sec rounded-[99px]'}></div>
+                                <div className={'relative w-full h-[378px] flex flex-row bg-[#ffb775] rounded-[20px] overflow-hidden'}>
+                                    <div className={'absolute -top-[400px] -left-[250px] rotate-60 size-[787px] bg-[#fceed5] rounded-[99px]'}></div>
+                                    <div className={'absolute top-[175px] -right-[150px] rotate-60 size-[787px] bg-sec rounded-[99px]'}></div>
                                     <div className={'flex flex-row px-[30px] lg:px-[75px] z-40'}>
-                                        <div className={'flex items-end'}>
-                                            <img src="/pictures/kisse.png" alt="" className={'bottom-0'}/>
-                                        </div>
                                         <div className={'h-full lg:w-2/3 flex items-center'}>
-                                            <div className={'flex flex-col text-right h-fit'}>
-                                                <span className={'font-bold text-[52px]/[68px]'}>One more friend</span>
-                                                <span className={'font-bold text-[36px]/[60px]'}>Thousands more fun!</span>
-                                                <div className={'flex justify-end w-full'}>
-                                                    <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
+                                            <div className={'flex flex-col h-fit'}>
+                                                <div className={'flex gap-4'}>
+                                                    <span className={'font-bold text-[52px]/[68px]'}>Adoption</span>
+                                                    <img src="/logos/foot.svg" alt=""/>
                                                 </div>
-                                                <div className={'flex flex-row gap-4 justify-end'}>
+                                                <span className={'font-bold text-[36px]/[60px]'}>We need help. So do they.</span>
+                                                <div className={'flex w-full'}>
+                                                    <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Adopt a pet and give it a home,it will be love you back unconditionally.</span>
+                                                </div>
+                                                <div className={'flex flex-row gap-4'}>
                                                     <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
                                                         View more
                                                     </Button>
@@ -225,8 +226,30 @@ const Page = () => {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div className={'flex items-end'}>
+                                            <img src="/pictures/handAndFoot.svg" alt="" className={'h-full'}/>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+                        </section>
+
+                        <section className={'flex flex-col gap-4'}>
+                            <div className={'flex flex-row items-center justify-between'}>
+                                <div className={'flex flex-col'}>
+                                    <span>Hard to choose right products for your pets ?</span>
+                                    <span className={'text-[24px] font-bold'}>Our Products</span>
+                                </div>
+                                <div className={'hidden md:block '}>
+                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                        View more
+                                    </Button>
+                                </div>
+                            </div>
+                            <div className={'w-full grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8'}>
+                                <BlogCard />
+                                <BlogCard />
+                                <BlogCard />
                             </div>
                         </section>
                     </div>
