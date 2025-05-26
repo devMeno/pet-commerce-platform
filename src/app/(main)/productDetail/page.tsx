@@ -36,8 +36,8 @@ const Page = () => {
     ]
     return (
         <UserLayout>
-            <div className={'relative pt-[100px] pb-[40px]'}>
-                <div className={'max-w-[1180px] w-[94%] lg:w-[80%] flex flex-col gap-[20px] mx-auto'}>
+            <div className={'relative pt-[100px]'}>
+                <div className={'max-w-[1180px] w-[94%] lg:w-[80%] flex flex-col gap-[20px] mx-auto my-[40px]'}>
                     <div className={'w-full px-0 md:p-[20px] rounded-[20px] border border-none lg:border-solid border-1 border-gray-100 flex flex-col lg:flex-row gap-[34px] justify-center'}>
                         <div className={'w-full md:w-1/2 flex flex-col gap-[17px]'}>
                             <div className={'flex flex-col gap-2'}>
@@ -147,18 +147,19 @@ const Page = () => {
                         </div>
                     </div>
                     <div className={'flex flex-col gap-[16px]'}>
-                        <div className={'flex flex-row items-center relative'}>
+                        <div className={'flex flex-row justify-between items-center relative my-[40px]'}>
                             <div className={'flex flex-col gap-2'}>
                                 <span>What new ?</span>
                                 <span className={'text-[24px] font-bold'}>Take a look at some of our pets</span>
                             </div>
                             <div className={'hidden md:block '}>
-                                <Button className={'absolute right-0 bg-white border border-solid border-2 border-main text-main font-bold px-[28px] py-[14px] rounded-full text-[16px] flex items-center'}>
+                                <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[14px] flex gap-2 items-center'}>
                                     View more
-                                </Button>
+                                    <img src="/logos/right.svg" alt=""/>
+                                </button>
                             </div>
                         </div>
-                        <div className={'w-full flex flex-wrap mx-auto'}>
+                        <div className={'w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8'}>
                             <AnimalCard />
                             <AnimalCard />
                             <AnimalCard />
@@ -166,9 +167,10 @@ const Page = () => {
                             <AnimalCard />
                             <AnimalCard />
                         </div>
-                        <Button className={'md:hidden bg-white border border-solid border-2 border-main text-main font-bold px-[28px] py-[14px] rounded-full text-[16px] flex items-center'}>
+                        <button className={'md:hidden bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[14px] flex gap-2 items-center'}>
                             View more
-                        </Button>
+                            <img src="/logos/right.svg" alt=""/>
+                        </button>
                     </div>
                 </div>
             </div>

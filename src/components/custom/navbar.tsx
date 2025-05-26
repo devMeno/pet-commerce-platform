@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {
@@ -8,19 +9,24 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import {useRouter} from "next/navigation";
 
 
 const Navbar = () => {
+    const router = useRouter();
+    const handleGoToHome = () => {router.push("/home");};
+    const handleGoToCategory = () => {router.push("/category");};
+
     return (
-        <div className={'absolute top-0 left-0 w-full z-40 text-[#003459]'}>
+        <div className={'absolute top-0 left-0 w-full z-40 text-[#003459] z-40'}>
             <div className={'hidden md:block'}>
                 <div className={'max-w-[1180px] w-[94%] lg:w-[80%] flex flex-row mx-auto items-center justify-between py-[28px]'}>
                     <button>
                         <img src="/logos/Logo.svg" alt=""/>
                     </button>
                     <ul className={'flex gap-[48px] font-semibold'}>
-                        <li>Home</li>
-                        <li>Category</li>
+                        <li onClick={handleGoToHome}>Home</li>
+                        <li onClick={handleGoToCategory}>Category</li>
                         <li>About</li>
                         <li>Contact</li>
                     </ul>

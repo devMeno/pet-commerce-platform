@@ -1,8 +1,13 @@
+"use client"
 import React from 'react';
+import {useRouter} from "next/navigation";
 
 const AnimalCard = () => {
+    const router = useRouter();
+    const handleGoToProduct = () => {router.push("/productDetail");};
+
     return (
-        <div className={'w-full max-w-[185px] md:max-w-[280px] p-[8px] flex flex-col gap-[8px] rounded-[12px] bg-white drop-shadow-md'}>
+        <div onClick={handleGoToProduct} className={'w-full max-w-[185px] md:max-w-[280px] p-[8px] flex flex-col gap-[8px] rounded-[12px] bg-white drop-shadow-md'}>
             <img src="/pictures/imageAnimal.svg" alt="" className={'size-[169px] md:size-[264px] mx-auto object-cover rounded-[12px]'} />
             <span className={'font-bold text-[14px] md:text-[16px] text-[#00171F]'}>MO231 - Pomeranian White</span>
             <div className={'flex gap-2 text-[12px]'}>

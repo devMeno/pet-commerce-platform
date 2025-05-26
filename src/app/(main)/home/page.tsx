@@ -31,7 +31,7 @@ const Page = () => {
                         <div className={'absolute -right-[395px] lg:right-0 xl:right-[30px] 2xl:right-[85px] top-[320px] z-20 rotate-35 size-[635px] bg-sec rounded-[99px]'}></div>
                     </div>
 
-                    <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col md:flex-row mx-auto z-40'}>
+                    <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col md:flex-row mx-auto z-30'}>
                         <div className={'h-[55vh] md:h-[100vh] w-full md:w-1/2'}>
                             <div className={'w-full h-full flex items-center'}>
                                 <div className={'flex flex-col xl:gap-4'}>
@@ -56,9 +56,9 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <div className={'relative py-[80px]'}>
+            <div className={'relative py-[40px] lg:py-[80px]'}>
                 <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col gap-[20px] mx-auto'}>
-                    <div className={'flex flex-col gap-[10px] lg:gap-[80px]'}>
+                    <div className={'flex flex-col gap-[40px] lg:gap-[80px]'}>
                         <section className={'flex flex-col gap-4'}>
                             <div className={'flex flex-row items-center justify-between'}>
                                 <div className={'flex flex-col'}>
@@ -91,12 +91,12 @@ const Page = () => {
                                     <div className={'absolute -top-[420px] -right-[200px] rotate-26 size-[787px] bg-sec rounded-[99px]'}></div>
                                     <div className={'flex flex-row px-[30px] lg:px-[75px] z-40'}>
                                         <div className={'flex items-end'}>
-                                            <img src="/pictures/kisse.png" alt="" className={'bottom-0'}/>
+                                            <img src="/pictures/kisse.png" alt="" className={'h-3/4 w-full'}/>
                                         </div>
-                                        <div className={'h-full lg:w-2/3 flex items-center'}>
+                                        <div className={'h-full lg:w-3/5 flex items-center'}>
                                             <div className={'flex flex-col text-right h-fit'}>
-                                                <span className={'font-bold text-[52px]/[68px]'}>One more friend</span>
-                                                <span className={'font-bold text-[36px]/[60px]'}>Thousands more fun!</span>
+                                                <span className={'font-bold text-[#002A48] text-[52px]/[68px]'}>One more friend</span>
+                                                <span className={'font-bold text-[#002A48] text-[36px]/[60px]'}>Thousands more fun!</span>
                                                 <div className={'flex justify-end w-full'}>
                                                     <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
                                                 </div>
@@ -121,8 +121,8 @@ const Page = () => {
                                     <div className={'absolute -bottom-[450px] -left-[130px]  -rotate-60 size-[610px] bg-main-min rounded-[45px]'}></div>
                                     <div className="flex flex-col z-40">
                                         <div className={'text-center py-[36px] px-[20px]'}>
-                                            <span className={'font-bold text-[36px]/[54px]'}>One more friend</span><br/>
-                                            <span className={'font-bold text-[24px]/[36px]'}>Thousands more fun!</span><br/>
+                                            <span className={'font-bold text-[#002A48] text-[36px]/[54px]'}>One more friend</span><br/>
+                                            <span className={'font-bold text-[#002A48] text-[24px]/[36px]'}>Thousands more fun!</span><br/>
                                             <div className={'flex justify-end w-full'}>
                                                 <span className={'font-medium text-[12px] my-[20px] w-full'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
                                             </div>
@@ -234,10 +234,10 @@ const Page = () => {
                                         <div className={'h-full lg:w-2/3 flex items-center'}>
                                             <div className={'flex flex-col h-fit'}>
                                                 <div className={'flex gap-4'}>
-                                                    <span className={'font-bold text-[52px]/[68px]'}>Adoption</span>
+                                                    <span className={'font-bold text-[#002A48] text-[52px]/[68px]'}>Adoption</span>
                                                     <img src="/logos/foot.svg" alt=""/>
                                                 </div>
-                                                <span className={'font-bold text-[36px]/[60px]'}>We need help. So do they.</span>
+                                                <span className={'font-bold text-[#002A48] text-[36px]/[60px]'}>We need help. So do they.</span>
                                                 <div className={'flex w-full'}>
                                                     <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Adopt a pet and give it a home,it will be love you back unconditionally.</span>
                                                 </div>
