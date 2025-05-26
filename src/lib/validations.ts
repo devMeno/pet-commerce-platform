@@ -28,10 +28,10 @@ export const animalValidationSchema = z.object({
     age: z.number().min(0, "L'âge doit être un nombre positif"),
     gender: z.enum(["MALE", "FEMALE"]),
     color: z.string().min(3, "La couleur est requise"),
-    size: z.optional(),
+    size: z.string().optional(), // ✅ Spécifiez le type avant .optional()
     price: z.number().min(1, "Le prix doit être positif"),
     description: z.string().optional(),
-    imaMALEgeUrl: imageSchema,
+    imageUrl: imageSchema, // ✅ Corrigé la typo "imaMALEgeUrl"
     category: z.enum(['CHIEN', 'CHAT', 'LAPIN', 'POISSON', 'OISEAU', 'REPTILE', 'AMPHIBIEN', 'RONGEUR', 'INVERTEBRE', 'FERME']),
     forAdoption: z.boolean(),
 })
