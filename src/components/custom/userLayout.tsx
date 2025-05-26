@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from "@/components/custom/navbar";
 import Footer from "@/components/custom/footer";
 
-const UserLayout = ({children}) => {
+const UserLayout = ({children}: { children: React.ReactNode }) => {
     return (
         <div>
             <Navbar/>
