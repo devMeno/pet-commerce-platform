@@ -28,7 +28,7 @@ export function ResgisterForm({
     }
 
     return (
-        <div className={cn("flex flex-col gap-6", className)}>
+        <form onSubmit={handleSubmit} className={cn("flex flex-col gap-6", className)}>
             <div className="flex flex-col items-center gap-2 text-center">
                 <h1 className="text-2xl font-bold">Créer un compte</h1>
                 <p className="text-balance text-sm text-muted-foreground">
@@ -36,7 +36,7 @@ export function ResgisterForm({
                 </p>
             </div>
             <div className="grid gap-6">
-                <form onSubmit={handleSubmit} className={'flex flex-col gap-2'}>
+                <div className={'flex flex-col gap-2'}>
                     <div className="grid gap-2">
                         <Label htmlFor="name">Nom</Label>
                         <Input id="name" name={'name'} type="text" placeholder="Votre nom" required />
@@ -60,7 +60,7 @@ export function ResgisterForm({
                     <Button type="submit" className="w-full">
                         Créer mon compte
                     </Button>
-                </form>
+                </div>
                 <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
                   <span className="relative z-10 bg-background px-2 text-muted-foreground">
                     Ou continuer avec
@@ -82,6 +82,6 @@ export function ResgisterForm({
                     Se connecter
                 </a>
             </div>
-        </div>
+        </form>
     )
 }
