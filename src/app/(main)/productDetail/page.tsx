@@ -3,14 +3,6 @@ import React from 'react';
 import UserLayout from "@/components/custom/userLayout";
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
-import ProductCard from "@/components/custom/productCard";
 import AnimalCard from "@/components/custom/animalCard";
 
 

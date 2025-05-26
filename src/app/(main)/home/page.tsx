@@ -1,10 +1,7 @@
 import React from 'react';
-import {Checkbox} from "@/components/ui/checkbox";
-import {Input} from "@/components/ui/input";
 import AnimalCard from "@/components/custom/animalCard";
 import ProductCard from "@/components/custom/productCard";
 import UserLayout from "@/components/custom/userLayout";
-import {Button} from "@/components/ui/button";
 import {InfiniteSlider} from "@/components/ui/infinite-slider";
 import BlogCard from "@/components/custom/blogCard";
 

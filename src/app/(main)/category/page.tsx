@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button} from "@/components/ui/button";
 import AnimalCard from "@/components/custom/animalCard";
 import UserLayout from "@/components/custom/userLayout";
 import { Checkbox } from "@/components/ui/checkbox"
