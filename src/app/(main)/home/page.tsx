@@ -11,48 +11,65 @@ import BlogCard from "@/components/custom/blogCard";
 const Page = () => {
     return (
         <UserLayout>
-            <div className={'relative w-full h-[695px] rounded-b-[15px] lg:rounded-b-[50px] bg-sec-min overflow-hidden'}>
+            <div className={'relative w-full h-[794px] md:h-[695px] rounded-b-[15px] lg:rounded-b-[50px] bg-sec-min overflow-hidden'}>
                 <div className={'flex flex-row w-full'}>
-                    <div className={'absolute -top-[570px] -left-[200px] rotate-26 size-[635px] bg-sec rounded-[99px]'}></div>
-                    <div className={'hidden lg:block absolute top-[200px] left-[170px] rotate-26 size-[75px] bg-sec rounded-[20px]'}></div>
-                    <div className={'absolute right-[150px] md:[350px] lg:right-[710px] top-[200px] z-30 rotate-15 size-[10px] md:size-[30px] bg-main rounded-[4px] md:rounded-[10px]'}></div>
-                    <div className={'absolute right-[150px] md:[350px] lg:right-[710px] top-[200px] z-20 rotate-35 size-[15px] md:size-[40px] bg-sec rounded-[4px] md:rounded-[10px]'}></div>
-                    <div className={'absolute -right-[330px] lg:right-[150px] top-[350px] z-20 rotate-15 size-[635px] bg-main rounded-[99px]'}></div>
-                    <div className={'absolute -right-[395px] lg:right-[85px] top-[320px] z-20 rotate-35 size-[635px] bg-sec rounded-[99px]'}></div>
+                    <div className={'block md:hidden'}>
+                        <div className={'absolute -top-[570px] -left-[200px] rotate-26 size-[635px] bg-sec rounded-[99px]'}></div>
+                        <div className={'hidden lg:block absolute top-[200px] left-[170px] rotate-26 size-[75px] bg-sec rounded-[20px]'}></div>
+                        <div className={'absolute right-[150px] md:[350px] lg:right-[710px] top-[200px] z-30 rotate-15 size-[10px] md:size-[30px] bg-main rounded-[4px] md:rounded-[10px]'}></div>
+                        <div className={'absolute right-[150px] md:[350px] lg:right-[710px] top-[200px] z-20 rotate-35 size-[15px] md:size-[40px] bg-sec rounded-[4px] md:rounded-[10px]'}></div>
+                        <div className={'absolute -right-[330px] top-[500px] z-20 rotate-15 size-[635px] bg-main rounded-[99px]'}></div>
+                        <div className={'absolute -right-[395px] top-[470px] z-20 rotate-35 size-[635px] bg-sec rounded-[99px]'}></div>
+                    </div>
+
+                    <div className={'hidden md:block'}>
+                        <div className={'absolute -top-[570px] -left-[200px] rotate-26 size-[635px] bg-sec rounded-[99px]'}></div>
+                        <div className={'hidden lg:block absolute top-[200px] left-[170px] rotate-26 size-[75px] bg-sec rounded-[20px]'}></div>
+                        <div className={'absolute right-[150px] md:[350px] lg:right-[710px] top-[200px] z-30 rotate-15 size-[10px] md:size-[30px] bg-main rounded-[4px] md:rounded-[10px]'}></div>
+                        <div className={'absolute right-[150px] md:[350px] lg:right-[710px] top-[200px] z-20 rotate-35 size-[15px] md:size-[40px] bg-sec rounded-[4px] md:rounded-[10px]'}></div>
+                        <div className={'absolute -right-[330px] lg:right-[65px] xl:right-[95px] 2xl:right-[150px] top-[350px] z-20 rotate-15 size-[635px] bg-main rounded-[99px]'}></div>
+                        <div className={'absolute -right-[395px] lg:right-0 xl:right-[30px] 2xl:right-[85px] top-[320px] z-20 rotate-35 size-[635px] bg-sec rounded-[99px]'}></div>
+                    </div>
+
                     <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col md:flex-row mx-auto z-40'}>
-                        <div className={'w-full h-full md:w-2/3 flex flex-col gap-4 mt-[200px]'}>
-                            <span className={'font-extrabold text-[#002A48] text-[60px]/[68px]'}>One more friend</span>
-                            <span className={'font-bold text-[#002A48] text-[38px] md:text-[46px]/[60px]'}>Thousands more fun!</span>
-                            <span className={'font-medium text-[#242B33] text-[16px] mt-[10px] mb-[20px] max-w-[480px]'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
-                            <div className={'flex flex-row gap-4'}>
-                                <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex gap-2 items-center'}>
-                                    View Intro
-                                    <span className="flex items-center size-[20px] border-[1.5px] rounded-full border-[#002A48]">
+                        <div className={'h-[55vh] md:h-[100vh] w-full md:w-1/2'}>
+                            <div className={'w-full h-full flex items-center'}>
+                                <div className={'flex flex-col xl:gap-4'}>
+                                    <span className={'font-extrabold text-[#002A48] text-[46px] md:text-[56px] xl:text-[70px]/[78px]'}>One more friend</span>
+                                    <span className={'font-bold text-[#002A48] text-[28px]  md:text-[38px] xl:text-[46px]/[60px]'}>Thousands more fun!</span>
+                                    <span className={'font-medium text-[#242B33] text-[16px] mt-[10px] mb-[20px] max-w-[480px]'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
+                                    <div className={'flex flex-row gap-4'}>
+                                        <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[16px] flex gap-2 items-center'}>
+                                            View Intro
+                                            <span className="flex items-center size-[20px] border-[1.5px] rounded-full border-[#002A48]">
                                         <img src="/logos/Play_Circle.svg" alt=""/>
                                     </span>
-                                </button>
-                                <button className={'bg-main border border-solid border-[1.5px] border-main text-white font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>Explore Now</button>
+                                        </button>
+                                        <button className={'bg-main border border-solid border-[1.5px] border-main text-white font-medium px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>Explore Now</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className={''}>
-                            <img src="/pictures/pet_banner_pic.svg" alt="" className={'h-[800px]'}/>
+                        <div className={'h-[45vh] md:h-[100vh] w-full md:w-1/2 flex items-end'}>
+                            <img src="/pictures/pet_banner_pic.svg" alt="" className={'w-full'}/>
                         </div>
                     </div>
                 </div>
             </div>
             <div className={'relative py-[80px]'}>
                 <div className={'max-w-[1180px] w-[94%] xl:w-[80%] flex flex-col gap-[20px] mx-auto'}>
-                    <div className={'flex flex-col gap-[80px]'}>
+                    <div className={'flex flex-col gap-[10px] lg:gap-[80px]'}>
                         <section className={'flex flex-col gap-4'}>
                             <div className={'flex flex-row items-center justify-between'}>
                                 <div className={'flex flex-col'}>
                                     <span>What new ?</span>
-                                    <span className={'text-[24px] font-bold'}>Take a look at some of our pets</span>
+                                    <span className={'text-[24px] text-[#003459] font-bold'}>Take a look at some of our pets</span>
                                 </div>
                                 <div className={'hidden md:block '}>
-                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
+                                    <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[14px] flex gap-2 items-center'}>
                                         View more
-                                    </Button>
+                                        <img src="/logos/right.svg" alt=""/>
+                                    </button>
                                 </div>
                             </div>
                             <div className={'w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8'}>
@@ -84,12 +101,13 @@ const Page = () => {
                                                     <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
                                                 </div>
                                                 <div className={'flex flex-row gap-4 justify-end'}>
-                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                        View more
-                                                    </Button>
-                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                        View more
-                                                    </Button>
+                                                    <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[16px] flex gap-2 items-center'}>
+                                                        View Intro
+                                                        <span className="flex items-center size-[20px] border-[1.5px] rounded-full border-[#002A48]">
+                                                            <img src="/logos/Play_Circle.svg" alt=""/>
+                                                        </span>
+                                                    </button>
+                                                    <button className={'bg-main border border-solid border-[1.5px] border-main text-white font-medium px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>Explore Now</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -109,12 +127,13 @@ const Page = () => {
                                                 <span className={'font-medium text-[12px] my-[20px] w-full'}>Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</span>
                                             </div>
                                             <div className={'flex flex-row gap-4 justify-center'}>
-                                                <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                    View more
-                                                </Button>
-                                                <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                    View more
-                                                </Button>
+                                                <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[15px] lg:px-[28px] h-[44px] rounded-full text-[16px] flex gap-2 items-center'}>
+                                                    View Intro
+                                                    <span className="flex items-center size-[20px] border-[1.5px] rounded-full border-[#002A48]">
+                                                        <img src="/logos/Play_Circle.svg" alt=""/>
+                                                    </span>
+                                                </button>
+                                                <button className={'bg-main border border-solid border-[1.5px] border-main text-white font-medium px-[15px] lg:px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>Explore Now</button>
                                             </div>
                                         </div>
                                         <div>
@@ -123,19 +142,21 @@ const Page = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </section>
 
                         <section className={'flex flex-col gap-4'}>
                             <div className={'flex flex-row items-center justify-between'}>
                                 <div className={'flex flex-col'}>
                                     <span>Hard to choose right products for your pets ?</span>
-                                    <span className={'text-[24px] font-bold'}>Our Products</span>
+                                    <span className={'text-[24px] text-[#003459] font-bold'}>Our Products</span>
                                 </div>
                                 <div className={'hidden md:block '}>
-                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                        View more
-                                    </Button>
+                                    <div className={'hidden md:block '}>
+                                        <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[14px] flex gap-2 items-center'}>
+                                            View more
+                                            <img src="/logos/right.svg" alt=""/>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <div className={'w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8'}>
@@ -157,9 +178,12 @@ const Page = () => {
                                     <span className={'text-[24px] font-bold'}>Pet Sellers</span>
                                 </div>
                                 <div className={'hidden md:block '}>
-                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                        View more
-                                    </Button>
+                                    <div className={'hidden md:block '}>
+                                        <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[14px] flex gap-2 items-center'}>
+                                            View more
+                                            <img src="/logos/right.svg" alt=""/>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <InfiniteSlider durationOnHover={75} gap={24}>
@@ -217,13 +241,14 @@ const Page = () => {
                                                 <div className={'flex w-full'}>
                                                     <span className={'font-medium text-[12px] my-[15px] w-full lg:w-2/3'}>Adopt a pet and give it a home,it will be love you back unconditionally.</span>
                                                 </div>
-                                                <div className={'flex flex-row gap-4'}>
-                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                        View more
-                                                    </Button>
-                                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                                        View more
-                                                    </Button>
+                                                <div className={'flex flex-row gap-3 xl:gap-4'}>
+                                                    <button className={'bg-main border border-solid border-[1.5px] border-main text-white font-medium px-[15px] lg:px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>Explore Now</button>
+                                                    <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[15px] lg:px-[28px] h-[44px] rounded-full text-[16px] flex gap-2 items-center'}>
+                                                        View Intro
+                                                        <span className="flex items-center size-[20px] border-[1.5px] rounded-full border-[#002A48]">
+                                                            <img src="/logos/Play_Circle.svg" alt=""/>
+                                                        </span>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -242,12 +267,15 @@ const Page = () => {
                                     <span className={'text-[24px] font-bold'}>Our Products</span>
                                 </div>
                                 <div className={'hidden md:block '}>
-                                    <Button className={'bg-white border border-solid border-2 border-main text-main font-bold px-[28px] h-[44px] rounded-full text-[16px] flex items-center'}>
-                                        View more
-                                    </Button>
+                                    <div className={'hidden md:block '}>
+                                        <button className={'bg-white border border-solid border-[1.5px] border-main text-main font-medium px-[28px] h-[44px] rounded-full text-[14px] flex gap-2 items-center'}>
+                                            View more
+                                            <img src="/logos/right.svg" alt=""/>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div className={'w-full grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8'}>
+                            <div className={'w-full grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8'}>
                                 <BlogCard />
                                 <BlogCard />
                                 <BlogCard />

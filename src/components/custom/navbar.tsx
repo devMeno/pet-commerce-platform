@@ -12,7 +12,7 @@ import {
 
 const Navbar = () => {
     return (
-        <div className={'absolute top-0 left-0 w-full z-40'}>
+        <div className={'absolute top-0 left-0 w-full z-40 text-[#003459]'}>
             <div className={'hidden md:block'}>
                 <div className={'max-w-[1180px] w-[94%] lg:w-[80%] flex flex-row mx-auto items-center justify-between py-[28px]'}>
                     <button>
@@ -24,7 +24,7 @@ const Navbar = () => {
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
-                    <Button className={'h-[48px] rounded-full font-bold text-white bg-main w-fit'} type="submit">Subscribe now</Button>
+                    <Button className={'h-[48px] px-[28px] rounded-full font-bold text-white bg-main w-fit'} type="submit">Join the community</Button>
                 </div>
             </div>
 
